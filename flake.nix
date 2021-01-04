@@ -11,7 +11,7 @@
       in {
         # `nix develop`
         devShell = mkShell {
-          nativeBuildInputs = (with pkgs; [ nodejs ])
+          nativeBuildInputs = (with pkgs; [ deno ])
             ++ (with elmPackages; [ elm elm-format elm-review ]);
         };
       });
