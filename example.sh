@@ -17,6 +17,8 @@ echo "C:"
 elm make src/MainC.elm --output=/dev/null
 popd
 
-echo "But not all of A is used by each other project..."
-pushd b && elm-review && popd
+echo
+pushd b
+elm-review
+popd
 

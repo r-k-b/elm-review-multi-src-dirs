@@ -1,13 +1,18 @@
-module MainA exposing (thisIsUsedByC, thisIsUsedByBandC)
+module MainA exposing (thisIsNeverUsed, thisIsUsedByB, thisIsUsedByC)
 
 import Html exposing (Html, text)
 
+
+thisIsUsedByB : Html msg
+thisIsUsedByB =
+    text "this is used by B"
+
+
 thisIsUsedByC : Html msg
 thisIsUsedByC =
-    text "this is used C"
-
-thisIsUsedByBandC : Html msg
-thisIsUsedByBandC =
-    text "this is used by B and C"
+    text "this is used by C"
 
 
+thisIsNeverUsed : Html msg
+thisIsNeverUsed =
+    text "this is never used"
